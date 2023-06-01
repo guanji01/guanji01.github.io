@@ -1,7 +1,7 @@
 /* lightense-images
    ====================================================
    Version : 1.0.10
-   Website : https://sparanoid.com/work/lightense-images/
+   Website : https://sparanoid.com/work/lightense-/images/
    Repo    : https://github.com/sparanoid/lightense-images
    Author  : Tunghsiao Liu
    License : MIT
