@@ -17,4 +17,4 @@ jobs:
       run: |
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/site/_site:/srv/jekyll/site/_site \
-        jekyll/builder:latest /bin/bash -c "chmod -R 777   /srv/jekyll && sudo  npm install && sudo npm run install-jekyll && cd site/ && sudo jekyll build --future"
+        jekyll/builder:latest /bin/bash -c "chmod -R 777   /srv/jekyll&&chown jekyll:jekyll -R /usr/gem && npm install && &&npm run install-jekyll && cd site/ && jekyll build --future"
