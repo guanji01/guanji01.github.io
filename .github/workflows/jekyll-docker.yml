@@ -1,38 +1,20 @@
- name: GH Pages deploy
+name: Jekyll site CI
 
-  on:
-    push:
-      branches: main
-      paths-ignore:
-        - README.md
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
-    pull_request:
-      branches: main
-      paths-ignore:
-        - README.md
+jobs:
+  build:
 
-  jobs:
-    build-deploy:
-      name: Build and deploy
+    runs-on: ubuntu-latest
 
-      runs-on: ubuntu-latest
-
-      steps:
-        - name: Checkout 🛎️
-          uses: actions/checkout@v2
-
-        - name: Build Jekyll site
-          run: |
-            docker run \
-              -v ${{ github.workspace }}:/srv/jekyll \
-              npm install \
-              npm run install-jekyll \
-              jekyll/builder:4.2.0 \
-              /bin/bash -c 'chmod 777 /srv/jekyll && bundle exec jekyll build --future'
-
-        - name: Deploy to GH Pages 🚀
-          if: ${{ github.event_name != 'pull_request' }}
-          uses: peaceiris/actions-gh-pages@v3
-          with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            publish_dir: _site
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the site in the jekyll/builder container
+      run: |
+        docker run \
+        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/site/_site:/srv/jekyll/site/git _site \
+        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
