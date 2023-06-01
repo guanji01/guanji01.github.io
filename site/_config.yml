@@ -1,5 +1,5 @@
 title: Vonge
-source: https://ahkevinxy.github.io/jekyll-bookshop-blog/
+baseurl: https://ahkevinxy.github.io/jekyll-bookshop-blog/
 plugins:
   - jekyll-bookshop
   - cloudcannon-jekyll-bookshop
