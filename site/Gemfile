@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 gem 'jekyll', '~> 4.2'
+gem  'sass-embedded' , '1.62.0'
 group :jekyll_plugins do
-  sass-embedded ,'1.62.0'
   gem "jekyll-bookshop", "2.2.2"
   gem "cloudcannon-jekyll-bookshop", "2.2.2"
   gem 'jekyll-watch', :git => "https://github.com/CloudCannon/jekyll-watch"
