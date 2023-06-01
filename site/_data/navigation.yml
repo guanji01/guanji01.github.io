@@ -2,15 +2,15 @@ logo_image: '/images/logo.svg' # You can add own logo. For example '/images/logo
 
 menu__settings:
   menu__items:
-    - title: 'Home'
+    - title: '首页'
       url: '/'
-    - title: 'Projects'
+    - title: '项目'
       url: '/projects/'
-    - title: 'Blog'
+    - title: '博客'
       url: '/blog/'
-    - title: 'Pages'
+    - title: '更多'
       submenu:
       - url: '/about/'
-        title: 'About'
-      - url: '/elements/'
+        title: '关于'
+      - url: '/概要/'
         title: 'Elements'

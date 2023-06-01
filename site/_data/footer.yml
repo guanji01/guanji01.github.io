@@ -1,15 +1,15 @@
 footer_menu__settings:
   menu__items:
-    - title: 'Home'
+    - title: '首页'
       url: '/'
-    - title: 'Projects'
+    - title: '项目'
       url: '/projects/'
-    - title: 'Elements'
+    - title: '概要'
       url: '/elements/'
-    - title: 'About'
+    - title: '关于'
       url: '/about/'
-    - title: 'Blog'
+    - title: '博客'
       url: '/blog/'
 
 copyright_text_html: >-
-  <p> 2021 &copy; <a href="/">Vonge</a>. Template by <a href="https://cloudcannon.com/">CloudCannon</a>.</p>
+  <p> 2023 &copy; <a href="/">Opencodes</a>. Template by <a href="https://ahkevinxy.github.io/">ahKevinXy</a>.</p>
