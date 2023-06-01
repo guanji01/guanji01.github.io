@@ -20,7 +20,7 @@ jobs:
             jekyll/builder:4.2.0 \
             /bin/bash -c 'chmod 777 /srv/jekyll && BUNDLE_GEMFILE=site/Gemfile bundle install && bundle exec jekyll build --source site'
 
-      - name: Deploy to GH Pages 🚀
+      - name: Deploy to GHPages 🚀
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
