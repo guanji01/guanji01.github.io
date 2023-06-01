@@ -26,7 +26,7 @@
             docker run \
               -v ${{ github.workspace }}:/srv/jekyll \
               npm install \
-              npm run install-jekyll
+              npm run install-jekyll \
               jekyll/builder:4.2.0 \
               /bin/bash -c 'chmod 777 /srv/jekyll && bundle exec jekyll build --future'
 
