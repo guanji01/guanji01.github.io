@@ -17,7 +17,7 @@ jobs:
           docker run \
             -v ${{ github.workspace }}:/srv/jekyll \
             -e BUNDLE_GEMFILE=site/Gemfile \
-            jekyll/builder:laster \
+            jekyll/builder:4.2.0 \
             /bin/bash -c 'chmod 777 /srv/jekyll &&   bundle install && bundle exec jekyll build --trace --source site'
 
       - name: Deploy to GHPages 🚀
