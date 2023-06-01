@@ -53,7 +53,7 @@ jobs:
 
       - name: Build with Jekyll
         # Defaults output to '/_site'
-        run: cd site/ && bundle exec jekyll build --baseurl ${{ steps.pages.outputs.base_path }} --profile --trace
+        run: cd site/ && npm install &&npm run install-jekyll  && bundle exec jekyll build --baseurl ${{ steps.pages.outputs.base_path }} --profile --trace
         env:
           JEKYLL_ENV: production
 
